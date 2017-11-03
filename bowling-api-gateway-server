@@ -13,6 +13,6 @@ management:
 zuul:
   routes:
     start:
-      serviceId: bowling-scoring-service
+      url: http://localhost:8080
   host:
     socket-timeout-millis: 30000
