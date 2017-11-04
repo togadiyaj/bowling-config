@@ -12,7 +12,11 @@ management:
     enabled: false
 zuul:
   routes:
-    start:
+    score:
+      path: /game/** 
       url: http://localhost:8080
+    register:
+      path: /register/**
+      url: http://localhost:8082
   host:
     socket-timeout-millis: 30000
