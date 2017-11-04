@@ -12,13 +12,13 @@ management:
     enabled: false
 zuul:
   routes:
-    account:
+    route1:
       serviceId: AccountService
-      path: account/**
-      url: http://localhost:8082
-    game:
-        serviceId: ScoreService
-        path: game/**
-      url: http://localhost:8080    
+      path: /api/account/**
+      stripPrefix: true
+    route2:
+      serviceId: ScoreService
+      path: /api/game/**
+      stripPrefix: true
   host:
     socket-timeout-millis: 30000
