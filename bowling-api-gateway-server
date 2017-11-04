@@ -12,11 +12,9 @@ management:
     enabled: false
 zuul:
   routes:
-    score:
-      path: /game/** 
+    bowling-scoring-service:
       url: http://localhost:8080
-    register:
-      path: /register/**
+    bowling-registration-service:
       url: http://localhost:8082
   host:
     socket-timeout-millis: 30000
