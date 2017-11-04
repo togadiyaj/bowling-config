@@ -20,5 +20,19 @@ zuul:
       serviceId: ScoreService
       path: /api/game/**
       stripPrefix: true
+    route3:
+      serviceId: UIService
+      path: /ui/**
+      stripPrefix: true
   host:
-    socket-timeout-millis: 30000
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+ribbon:
+  ReadTimeout: 100000
+  ConnectTimeout: 100000
