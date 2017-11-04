@@ -12,10 +12,12 @@ management:
     enabled: false
 zuul:
   routes:
-    AccountService:
+    account:
+      serviceId: AccountService
       path: account/**
       url: http://localhost:8082
-    ScoreService:
+    game:
+        serviceId: ScoreService
         path: game/**
       url: http://localhost:8080    
   host:
