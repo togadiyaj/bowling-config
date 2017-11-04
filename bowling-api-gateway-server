@@ -13,8 +13,10 @@ management:
 zuul:
   routes:
     AccountService:
+      path: account/**
       url: http://localhost:8082
-    bowling-scoring-service:
+    ScoreService:
+        path: game/**
       url: http://localhost:8080    
   host:
     socket-timeout-millis: 30000
